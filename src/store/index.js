@@ -121,7 +121,6 @@ export default createStore({
 
             state.streamer.onmessage = function onStreamMessage(message) {
                 const data = JSON.parse(message.data)
-                console.log(data)
                 var coins = state.coins
                 if (data.TYPE == 2 && state.coins[data.FROMSYMBOL] !== undefined && data.PRICE) {
                     if (coins[data.FROMSYMBOL] === null)
