@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply bg-gray-100 relative transition-all;
+}
+body .container {
+  @apply w-full min-w-full md:p-6;
+}
+body .container .tickers {
+  @apply md:px-0 pb-20 p-4 flex flex-col gap-3 md:gap-[8px] relative w-full left-0 top-0;
+}
+body .container .tickers .search_ticker_input {
+  @apply md:max-w-[456px] bg-white box-border flex-row align-middle py-[9px] px-[15.5px] border border-gray-300 rounded-md;
+}
+body .container .tickers .search_ticker_input input {
+  @apply bg-[url("/src/assets/icons/search.svg")] bg-no-repeat bg-left w-full px-[24.5px];
+}
+body .container .tickers .tickers_list {
+  @apply gap-3 flex-wrap inline-flex after:content-none after:table after:clear-both;
+}
+body .container .tickers .tickers_list .ticker_box.active {
+  @apply border-[3px] border-gray-900 cursor-default;
+}
+body .container .tickers .tickers_list .ticker_box {
+  @apply md:w-[calc((100%-24px)/3)] w-full float-left cursor-pointer relative bg-white px-5 py-4 text-gray-900 box-border flex-col items-start gap-8 border border-gray-300 rounded-md self-stretch grow-0 flex-none;
+}
+body .container .tickers .tickers_list .ticker_box .ticker_box_header {
+  @apply font-medium text-sm flex-none order-1;
+}
+body .container .tickers .tickers_list .ticker_box .ticker_box_price {
+  @apply font-normal text-4xl flex-none order-1 self-stretch;
+}
+body .container .tickers .tickers_list .ticker_box .ticker_box_delete_button {
+  @apply cursor-pointer top-[18.5px] right-[23.33px] absolute;
+}
+body .container .tickers .tickers_list .ticker_graph {
+  @apply transition-all items-end p-5 bg-white rounded-md flex-none h-60 w-full;
+}
+@media (min-width: 768px) {
+  body .container .tickers .tickers_list .ticker_graph {
+    order: 7 !important;
+  }
+}
+body .container .add_ticker {
+  @apply p-4 flex flex-col gap-3 md:rounded-lg relative w-full left-0 top-0 bg-white rounded-none;
+}
+body .container .add_ticker .add_ticker_input {
+  @apply md:max-w-[440px] box-border flex flex-col align-middle px-3 py-2 w-full h-14 bg-white border border-r border-gray-300 rounded-md shadow-sm flex-none order-1 self-stretch grow-0 bg-transparent;
+}
+body .container .add_ticker .add_ticker_input input {
+  @apply outline-none border-none block text-sm;
+}
+body .container .add_ticker .add_ticker_input label {
+  @apply font-medium text-xs text-gray-700 block;
+}
+body .container .add_ticker .add_button {
+  @apply flex flex-col justify-center align-middle py-3 px-6 h-full w-fit bg-[#471F7A] shadow-sm border border-r rounded-md flex-none order-2 grow-0 not-italic font-medium text-base text-white flex-none order-1 grow-0;
+}
+body .container .pagination {
+  @apply w-full flex-col items-start pt-[13px] pb-[12px] px-[16px] fixed md:absolute left-0 bottom-0 bg-white border-t border-gray-200 md:bg-transparent;
+}
+body .container .pagination .pagination_text {
+  @apply flex-row float-left hidden md:block font-normal text-sm text-gray-700;
+}
+body .container .pagination .pagination_buttons {
+  @apply md:float-right md:gap-3 md:flex-wrap md:inline-flex;
+}
+body .container .pagination .pagination_buttons .pagination_button {
+  @apply bg-white box-border flex-row justify-center align-middle py-[9px] px-[17px] border border-r border-gray-300 rounded-md shadow-sm text-gray-700;
+}
+body .container .pagination .pagination_buttons .pagination_button_prev {
+  @apply float-left md:float-right;
+}
+body .container .pagination .pagination_buttons .pagination_button_next {
+  @apply float-right;
+}
+
+/*# sourceMappingURL=style.css.map */
